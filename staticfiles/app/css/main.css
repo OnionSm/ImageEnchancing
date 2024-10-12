@@ -1,0 +1,350 @@
+@font-face {
+    font-family: 'Genshin';
+    src: url('/static/app/fonts/genshin.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Genshin2';
+    src: url('/static/app/fonts/zh-cn.ttf') format('truetype');
+}
+.main_container {
+    margin-top: 20px;
+    width: 50%; 
+    height: 100%;
+    background-color: #0e111a;
+    margin-left: 25%; 
+    margin-right: 25%;
+    box-sizing: border-box; 
+}
+body
+{
+    background-color: #0e111a;
+}
+.APP
+{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    margin: 15px 0;
+}
+.File_zone 
+{
+    margin: 10px 0;
+    width: 100%;
+    height: 70px;
+    background-color: #272731;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;     
+    border-radius: 10px;   
+}
+
+.File_zone_1 
+{
+    display: flex;
+    align-items: center; 
+    position: relative;
+    justify-content: space-between; 
+     
+}
+
+.File_zone_1_upload_icon
+{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    object-fit: contain;
+    margin : 15px;
+}
+
+.File_zone_1_desc 
+{
+    flex-direction: column; 
+    display: flex;
+    color: white;   
+    margin-left: 70px;
+    justify-content: space-evenly;
+}
+.File_zone_1_desc_1
+{
+    margin: 5px
+}
+.File_zone_1_desc_2
+{
+    margin: 5px
+}
+
+.File_zone_2 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.File_zone_2_submit_btn
+{
+    display: inline-flex;
+    justify-content: center;  
+    align-items: center;
+    height: 35px;
+    width: 70px;        
+    margin: 5px 0px;
+    background-color: #383737;
+    color: white;       
+    border-radius: 5px;
+    margin-right: 15px;
+    cursor: pointer;
+    border: 1px solid #ff0000; 
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.File_zone__submit_btn:hover 
+{
+    background-color: #45a049; 
+}
+
+.file_info
+{
+    margin : 10px 0;
+    width: 100%;
+    height: 40px;
+    background-color: #0e111a;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;  
+    display: none; 
+}
+.file_info_1
+{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    position: relative;
+}
+
+.file_info_icon
+{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    margin : 0px 20px;
+}
+.file_info_name
+{
+    margin-left : 5px;
+    margin-right: 20px;
+    color: #fff;
+}
+.file_info_size
+{
+    margin-left : 5px;
+    margin-right: 20px;
+    color: #fff;
+}
+.file_info_exit {
+    width: 25px; 
+    height: 25px;
+    margin: 0 20px;
+    background-image: url('/static/app/sprite/exit_icon.png');
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none; 
+    cursor: pointer; 
+}
+
+
+body {
+    min-height: 100vh; 
+    display: flex; 
+    justify-content: center;
+    align-items: top; 
+}
+#dynamicImage
+{
+    display: none;
+    margin: 15px 0;
+    border-radius: 10px;
+}
+.Option_enchanging__text
+{
+    font-family: 'Genshin2', sans-serif;
+    margin: 15px 0;
+    color :#fff;
+    font-size: 12px;
+}
+.Option_enchanging
+{
+    width: 100%;
+    height: 60px;      
+    background-color: #0e111a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.dropdown
+{       
+    position: relative;
+    box-sizing: border-box;
+}
+.select {
+    background: #2a2f3b;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    border: 2px #2a2f3b solid;
+    border-radius: 0.5em; 
+    padding: 1em;   
+    cursor: pointer; 
+    /* transition: background 0.3s;  */
+}
+.selected-clicked
+{
+    border: 2px #26489a solid;
+    box-shadow: 0 0 0.8em #26489a;
+}
+.select:hover
+{
+    background: #323741;
+}
+.caret
+{
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #fff;
+    transition: 0.3s;
+}
+.caret-rotate
+{
+    transform: rotate(180deg);
+}
+.menu
+{
+    list-style: none;
+    padding: 1px 1px;
+    background: #0e111a;
+    border: 1px #363a43 solid;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+    border-radius: 0.5em;   
+    color: #fff;
+    position: absolute;     
+    top : 45px;
+    left : 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    opacity: 0;
+    display: none;
+    z-index: 1;       
+}
+.menu li
+{
+    padding: 0.7em 0.5em;
+    margin: 3px 1px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.menu li:hover
+{
+    background: #2a2d35;
+}
+.active
+{
+    background: #23242a;
+}
+.menu-open
+{
+    display: block;
+    opacity: 1      ;
+}
+.execute
+{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.execute_button
+{
+    height: 40px;
+    width: 85px;        
+    margin: 5px 0px;
+    background-color: #3cc341;
+    color: white;       
+    margin-right: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.text_image_result
+{
+    margin: 20px 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Genshin2', sans-serif;
+}
+.output_images
+{
+    display: flex;
+    justify-content: space-between;
+}
+.similar-image_item
+{
+    flex-basis: 20%;
+}
+#imageGallery
+{
+    display: none;
+}
+
+.Denosing 
+{
+    margin: 10px 0;
+    width: 100%;
+    height: 100px;
+    background-color: #272731;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;     
+    border-radius: 10px; 
+}
+
+.Denosing_image 
+{
+    border-radius: 10px;
+}
+
+
+.Sharpening
+{
+    height: 100px;
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.Sharpening_image
+{
+    flex-basis: 20%;
+}
+.Edge_Detection
+{
+    height: 100px;
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+.Edge_Detection_image
+{
+    flex-basis: 20%;
+}
