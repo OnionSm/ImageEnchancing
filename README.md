@@ -46,7 +46,33 @@ Sau đó thử lại lệnh
 ```bash
 myenv\Scripts\activate
 ```
+4. Cài các thư viện cần thiết
+Trong file requirements.txt đã có các thư viện cần thiết cho việc thực thi chương trình, chạy lệnh dưới sẽ cài đặt tất cả các thư viện
+```
+pip install -r requirements.txt
+```
 
+5. Thu thập các file static
+Trong Django, thu thập (collect) tất cả các tệp tĩnh (static files) từ các ứng dụng vào một thư mục duy nhất.
+```
+python manage.py collectstatic
+```
+Nếu có đoạn thông báo dưới này thì nhấn yes
+```
+This will overwrite existing files!
+Are you sure you want to do this?
+
+Type 'yes' to continue, or 'no' to cancel:
+```
+6. Chạy server local
+```
+python manage.py runserver 8181
+```
+
+7. Truy cập local host
+```
+http://127.0.0.1:8181/
+```
 
 
 
