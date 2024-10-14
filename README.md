@@ -15,8 +15,9 @@
 ### Run
 1. [Install Python 3.11.0](https://www.python.org/downloads/release/python-3110/)
 2. Tạo Môi Trường Ảo Python
-```bash
+<span class="hljs-code">```bash
 python -m venv myenv
+</span>
 
 3. Kích hoạt môi trường
 Để kích hoạt môi trường ảo Python, bạn có thể sử dụng lệnh sau:
