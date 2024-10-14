@@ -6,20 +6,24 @@ import numpy as np
 import base64
 import traceback
 import cv2
+from django.views.decorators.csrf import csrf_exempt
 
 def convert_numpy_to_base64(np_array):
     try:
         image = Image.fromarray(np_array.astype('uint8')) 
+        if image.mode in ('RGBA', 'P'): 
+            image = image.convert('RGB')
+    
         img_byte_arr = io.BytesIO()
-        
         image.save(img_byte_arr, format='JPEG')
         img_byte_arr = img_byte_arr.getvalue()
-        
         return base64.b64encode(img_byte_arr).decode('utf-8')
+    
     except Exception as e:
         print(f"Error converting NumPy array to base64: {e}")
         raise
 
+@csrf_exempt
 def upload_image(request):
     if request.method == 'POST':
         print("Received POST request for image upload.")
